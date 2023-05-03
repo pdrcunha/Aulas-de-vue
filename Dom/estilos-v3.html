@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Estilos-v3</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="demo" :class="{c1:aplicarC1}" @click="aplicarC1 = !aplicarC1"></div>
+        <div class="demo" ></div>
+        <div class="demo" :class="[classeCss,'girar']"></div>
+        <label for="">Mudando o 3 quadrado dinamico (use c1,c2,c3)</label>
+        <input type="text" v-model="classeCss" id="">
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                aplicarC1: false,
+                classeCss:'c2'
+            },
+
+        })
+    </script>
+</body>
+
+</html>
+<style>
+    #app {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .demo {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+    }
+
+    .c1 {
+        background-color: blue;
+    }
+
+    .c2 {
+        background-color: green;
+    }
+
+    .c3 {
+        background-color: yellow;
+    }
+    .girar{
+        transform: rotate(45deg);
+    }
+</style>
