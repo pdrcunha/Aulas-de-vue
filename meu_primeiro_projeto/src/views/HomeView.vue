@@ -1,9 +1,19 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<script >
+import Header from '../components/Header.vue';
+
+export default {
+  name: 'HomeView',
+  components: {
+    Header,
+}
+}
 </script>
 
+
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    abbb
+    <Header/>
+  </div>
+ 
 </template>
